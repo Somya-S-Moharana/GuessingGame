@@ -1,0 +1,29 @@
+improt java.util.Random; 
+import java.util.Scanner;
+
+public class Guessinggame {
+
+    public static void main(String [] args) {
+        int guess, answer;
+        do{
+
+           System.out.println("Enter your guess :");
+           Scanner scanner = new Scanner(System.in);
+           guess = scanner.nextInt();
+
+           Random random = new Random();
+           answer = random.nextInt( 100 - 1) + 1;
+
+           if (guess > answer) {
+               System.out.println("Too high, Try again!" + String.valueOf(answer));
+           }
+           if (guess < answer) {
+               System.out.println("Too Low, Try agian!" + String.valueOf(answer));
+           }
+           
+         
+
+        }while (guess != answer);
+    } 
+
+}
